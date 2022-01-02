@@ -1,0 +1,316 @@
+:root { /* variables de couleurs pour simplifier les changements généraux de couleurs */
+    --col1: rgb(0, 167, 167);
+    --col1bis: rgb(27, 27, 27);
+}
+
+/* parametres generaux des nuages */
+
+.description {
+	padding-top: 150px;
+    overflow-x: hidden;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 100px;
+}
+
+.nuage {
+    text-align: center;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 80px 1em 0 1em;
+    position: relative;
+    background-color: var(--col1);
+    border-radius: 100% 100% 0 0;
+    transition: all 0.8s ease-in-out;
+    margin: -30px 0 -30px 0;
+}
+
+.nuage:before,
+.nuage:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--col1);
+    border-radius: 100%;
+}
+
+.nuage:before {
+    border-bottom-right-radius: 0;
+}
+
+.nuage:after {
+    border-bottom-left-radius: 0;
+}
+
+.nuage p {
+    color:var(--col1bis);
+    position:relative;
+    transition: all 1s ease-in-out;
+}
+
+/* le premier nuage  */
+
+.nuage-1 {
+    right: 180px;
+    width: 250px;
+    height: 250px;
+}
+
+.nuage-1:before {
+    width: 210px;
+    height: 210px;
+    right: 133px;
+}
+
+.nuage-1:after {
+    width: 167px;
+    height: 167px;
+    left: 167px;
+}
+
+.nuage-1 p {
+    font-size: 110%;
+    bottom: 30px;
+    right: 5px;
+}
+
+/* deuxieme nuage  */
+
+.nuage-2 {
+    left: 230px;
+    width: 300px;
+    height: 300px;
+}
+
+.nuage-2:before {
+    width: 250px;
+    height: 250px;
+    right: 160px;
+}
+
+.nuage-2:after {
+    width: 200px;
+    height: 200px;
+    left: 200px;
+}
+
+.nuage-2 p {
+    font-size: 115%;
+}
+
+
+/* troisieme nuage  */
+
+.nuage-3 {
+    right: 240px;
+    width: 200px;
+    height: 200px;
+}
+
+.nuage-3:before {
+    width: 167px;
+    height: 167px;
+    right: 107px;
+}
+
+.nuage-3:after {
+    width: 133px;
+    height: 133px;
+    left: 133px;
+}
+
+.nuage-3 p {
+    font-size: 105%;
+    bottom: 45px;
+}
+
+/* dernier nuage  */
+
+.nuage-4 {
+    left: 160px;
+    width: 250px;
+    height: 250px;
+}
+
+.nuage-4:before {
+    width: 210px;
+    height: 210px;
+    right: 133px;
+}
+
+.nuage-4:after {
+    width: 167px;
+    height: 167px;
+    left: 167px;
+}
+
+.nuage-4 p {
+    font-size: 110%;
+    bottom: 20px;
+}
+
+/* hover des nuages */
+
+.nuage:hover {
+    transform:scale(1.15);
+}
+
+.nuage:hover p {
+    color: ivory;
+}
+
+/* petits nuages qui passent derriere en animation */
+
+.small {
+    left: calc(50vw - 160px);
+    bottom: calc(50vh - 120px);
+    width: 100px;
+    height: 100px;
+    visibility: visible;
+    position: absolute;
+    z-index: -2;
+    background-color: ivory;
+    visibility: hidden;
+}
+.small.scroll {
+    visibility: visible;
+}
+
+.small:before {
+    width: 84px;
+    height: 84px;
+    right: 53px;
+    background-color: ivory;
+}
+
+.small:after {
+    width: 67px;
+    height: 67px;
+    left: 67px;
+    background-color: ivory;
+}
+
+.no1 {
+    top: 2100px;
+    animation: cloudLeft 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no2 {
+    top: 2200px;
+    animation: cloudRight 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no3 {
+    top: 2270px;
+    animation: cloudLeft 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no4 {
+    top: 2360px;
+    animation: cloudRight 32s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no5 {
+    top: 2440px;
+    animation: cloudLeft 27s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no6 {
+    top: 2500px;
+    animation: cloudRight 23s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no7 {
+    top: 2570px;
+    animation: cloudLeft 33s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no8 {
+    top: 2630px;
+    animation: cloudRight 21s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no9 {
+    top: 2690px;
+    animation: cloudLeft 29s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no10 {
+    top: 2750px;
+    animation: cloudRight 26s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no11 {
+    top: 2800px;
+    animation: cloudLeft 22s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.no12 {
+    top: 2860px;
+    animation: cloudRight 31s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes cloudLeft {
+    0% { transform: translate(-800px, 0px) }
+    100% { transform: translate(1000px, 0px) }
+}
+
+@keyframes cloudRight {
+    0% { transform: translate(1000px, 0px) }
+    100% { transform: translate(-800px, 0px) }
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 1000px) {
+
+    .nuage {
+        transform: scale(0.6);
+    }
+
+    .nuage-1 {
+        right: 100px;
+    }
+
+    .nuage-2 {
+        left: 100px;
+    }
+
+    .nuage-3 {
+        right: 140px;
+    }
+
+    .nuage-4 {
+        left: 100px;
+    }
+}

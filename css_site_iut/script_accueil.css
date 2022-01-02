@@ -1,0 +1,459 @@
+main {
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+a:link {
+	text-decoration: none;
+	cursor:-moz-grabbing;
+}
+
+/* div en tete */
+
+.en-tete {
+	position: absolute;
+	color:ivory;
+	top: calc(50vh - 1em);
+	left: calc(50vw - 370px);
+	text-shadow: 1px 1px 2px black, 0 0 1em cyan, 0 0 0.2em darkcyan;
+	font-size: 250%;
+	animation: appearsBot 0.5s;
+	animation-iteration-count: 1;
+}
+
+.en-tete:after {
+	content:'';
+	display: block;
+	margin: auto;
+	height: 4px;
+	width: 0%;
+	border-radius: 20%;
+	background: transparent;
+	transition: width 0.5s ease, background-color 0.5s ease;
+}
+   
+.en-tete:hover:after {
+	width: 80%;
+	background: ivory;
+}
+
+.temp {
+	position:absolute;
+	top: 8vh;
+	visibility: hidden;
+	height: 92vh;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.portrait {
+	position:absolute;
+	top: 8vh;
+	height: 92vh;
+	visibility: hidden;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+/* div bubule */
+
+.separateur {
+	padding: 15px;
+	border-radius: 0 0 50% 50%;
+	transition: all 0.5s ease-in-out;
+	background-color: cyan;
+	margin-bottom: 150px;
+}
+
+.barre {
+	position:absolute;
+    background-color: darkcyan;
+	top: 121vh;
+    height: 550px;
+    width:6px;
+    left: calc(50vw - 13px);
+	border-radius: 0 0 25% 25%;
+	transition: all 0.3s ease-in-out;
+}
+
+.circle {
+	position:absolute;
+    background-color: darkcyan;
+	top: 120vh;
+    left: calc(50vw - 25px);
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	transition: all 0.3s ease-in-out;
+}
+
+.separateur.scroll {
+	background-color: darkcyan;
+	position:sticky;
+	top: 8vh;
+	z-index: 10;
+}
+
+.bubules {
+	text-align: center;
+	color: ivory;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.boxinfo {
+	position: relative;
+	visibility: hidden;
+	font-size: 180%;
+	background: linear-gradient(45deg, darkcyan, rgb(21, 196, 196));
+	padding: 15px ;
+	border-radius: 20%;
+    margin: 5px 0 5px 0;
+	width: 300px;
+	transition: all 0.5s ease-in-out;
+	font-style: italic;
+}
+
+.boxinfo-1, .boxinfo-3 {
+	left: calc(150px + 10vw);
+	text-align: left;
+	padding-left: 30px;
+}
+
+.boxinfo-2, .boxinfo-4 {
+	right: calc(150px + 10vw);
+	text-align: right;
+	padding-right: 30px;
+}
+
+.boxinfo-1.scroll, .boxinfo-3.scroll {
+	visibility: visible;
+	animation: appearsRight 0.5s;
+	animation-iteration-count: 1;
+}
+
+.boxinfo-2.scroll, .boxinfo-4.scroll {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+	animation-iteration-count: 1;
+}
+
+
+
+
+
+
+
+/* div structure */
+
+.structure {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 160px;
+	transition: all 0.5s ease-in-out;
+}
+
+div.structure img {
+	height: 40%;
+	width: 100%;
+	filter: blur(4px);
+}
+
+.presentation {
+	margin: 0 4vw 0 4vw;
+	background-color: darkgray;
+	height: 480px;
+	width: 300px;
+	border-radius: 5%;
+	visibility: hidden;
+	color: ivory;
+	transition: all 0.5s ease-in-out;
+}
+
+.presentation p {
+	padding: 0 25px 50px 25px;
+}
+
+.pres-2 p, .pres-3 p {
+	padding-top: 20px;
+}
+
+.presentation h3{
+	font-size: 150%;
+	padding-top: 20px;
+}
+
+.pres-1:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: lightcoral;
+}
+
+.pres-1:hover img {
+	transition: all 0.5s ease-in-out;
+	filter: blur(0);
+}
+
+.pres-2:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: green;
+}
+
+.pres-2:hover img {
+	transition: all 0.5s ease-in-out;
+	filter: blur(0);
+}
+
+.pres-3:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: blueviolet;
+}
+
+.pres-3:hover img {
+	transition: all 0.5s ease-in-out;
+	filter: blur(0);
+}
+
+.pres-3.scroll {
+	visibility: visible;
+	animation: appearsRight 0.5s;
+	animation-iteration-count: 1;
+}
+
+.pres-2.scroll {
+	visibility: visible;
+	animation: appearsBot 0.5s;
+	animation-iteration-count: 1;
+}
+
+.pres-1.scroll {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+	animation-iteration-count: 1;
+}
+
+
+
+
+
+/* div presentation // animation sur les nuages */
+
+.nuage-1.scroll {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+	animation-iteration-count: 1;
+}
+
+.nuage-2.scroll {
+	visibility: visible;
+	animation: appearsRight 0.5s;
+	animation-iteration-count: 1;
+}
+
+.nuage-3.scroll {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+	animation-iteration-count: 1;
+}
+
+.nuage-4.scroll {
+	visibility: visible;
+	animation: appearsRight 0.5s;
+	/* animation-iteration-count: 1; */
+}
+
+
+
+/* div loca */
+
+.loca {
+	margin-top: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.map {
+	padding: 5px 0px 30px 0px;
+	width: 50px;
+	height: 30px;
+	border: 0;
+	filter: grayscale(100%) invert(90%);
+	border-radius: 10%;
+	position: fixed;
+	right: -150px;
+	bottom: 100px;
+	transition: all 0.5s ease-in-out;
+}
+
+.map.scroll {
+	right: 6vw;
+	width: 50vw;
+	height: 30vw;
+}
+
+.explication-map, .adresse {
+	background: linear-gradient(45deg, darkcyan, rgb(26, 172, 172));
+	padding: 20px;
+	position: relative;
+	right: 30vw;
+	border-radius: 10%;
+	margin: 0 35% 50px 35%;
+	visibility: hidden;
+	color: var(--col1bis);
+	transition: all 1s ease-in-out;
+}
+
+.adresse {
+	margin-bottom: 100px;
+}
+
+.explication-map:hover, .adresse:hover {
+	transform: scale(1.15);
+	color: ivory;
+}
+
+.explication-map.scroll  {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+}
+
+.adresse.scroll  {
+	visibility: visible;
+	animation: appearsLeft 0.5s;
+}
+
+
+
+
+
+
+/* animations */
+
+@keyframes appearsRight {
+    0% { transform: translate(100px, 0px) }
+    100% { transform: translate(0px, 0px) }	
+}
+
+@keyframes appearsLeft {
+    0% { transform: translate(-100px, 0px) }
+    100% { transform: translate(0px, 0px) }	
+}
+
+@keyframes appearsBot {
+    0% { transform: translate(0px, 50px) }
+    100% { transform: translate(0px, 0px) }	
+}
+
+
+
+
+
+
+/* media querries pour le responsive */
+
+@media (max-width: 1300px) {
+
+	.temp {
+		visibility: visible;
+	}
+}
+
+@media (max-width: 500px) {
+	
+	.temp {
+		visibility: hidden;
+	}
+	
+	.portrait {
+		visibility: visible;
+	}
+}
+
+@media (max-width: 900px) {
+	
+	.en-tete {
+		font-size: 150%;
+	left: calc(50vw - 230px);
+	}
+	
+	.boxinfo {
+		width: 200px;
+		font-size: 140%;
+		padding: 10px;
+	}
+
+	.boxinfo-1, .boxinfo-3 {
+		left: calc(100px + 10vw);
+	}
+	
+	.boxinfo-2, .boxinfo-4 {
+		right: calc(100px + 10vw);
+	}
+
+	.structure {
+	padding-top: 260px;
+
+	}
+
+	.barre {
+		height: 430px;
+	}
+}
+
+@media (max-width: 1150px) {
+
+	.structure {
+		transform: scale(0.75);
+	}
+
+	.presentation:hover {
+		transform: scale(1.5);
+	}
+}
+
+@media (max-width: 850px) {
+
+	.structure {
+		transform: scale(0.6);
+	}
+
+	.presentation:hover {
+		transform: scale(1.3);
+	}
+}
+
+@media (max-width: 600px) {
+
+	.structure {
+		transform: scale(0.4);
+	}
+
+	.presentation:hover {
+		transform: scale(1.2);
+	}
+}
+
+@media (max-width: 1000px) {
+
+	.explication-map, .adresse  {
+		transform: scale(0.7);
+	}
+
+	.adresse {
+		margin-bottom: 40px;
+	}
+
+	.explication-map {
+		margin-bottom: 0;
+	}
+}

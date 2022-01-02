@@ -1,0 +1,99 @@
+:root {
+	--col1: rgb(27, 27, 27);
+}
+
+main {
+	color: var(--col1);
+}
+
+
+h1 {
+	left: calc(50vw - 155px);
+}
+
+.flexbox-5 {
+	color:gold;
+	font-size: 120%;
+	top: 12px;
+}
+
+form.formulaire {
+	transition: all 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	margin: 30px 10vw 30px 10vw;
+	background: darkcyan;
+	border-radius: 5%;
+	color: var(--col1);
+}
+
+form.formulaire label {
+	color: var(--col1);
+	transition: all 0.2s ease-in-out;
+}
+
+form.formulaire label:hover {
+	color: ivory;
+}
+
+.explication-form, .lien-reseaux {
+	transition: all 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	margin: 60px 30vw 60px 30vw;
+	background: darkcyan;
+	border-radius: 5%;
+	padding: 10px 20px 10px 20px;
+}
+
+.explication-form:hover, .lien-reseaux:hover {
+	color: ivory;
+	transform: scale(1.15);
+}
+
+input {
+	margin: 30px 0 30px 0;
+}
+
+.separateur {
+	margin-bottom: 200px;
+	padding: 15px;
+    shape-outside: margin-box;
+	border-radius: 0 0 50% 50%;
+	background-color: darkcyan;
+	position:sticky;
+	top: 8vh;
+	z-index: 10;
+}
+
+.message p{
+	position: relative;
+	bottom: 20px;
+}
+
+.boutton {
+	background: lightgrey;
+	transition: all 0.2s ease-in-out;
+}
+
+.boutton:hover {
+	background:grey;
+}
+
+@media (orientation: portrait) {
+    
+    h1 {
+        left: calc(50vw - 100px);
+    }
+
+	.explication-form, .lien-reseaux {
+		margin: 60px 15vw 60px 15vw;
+	}
+}
+
+@media (max-width: 1035px) {
+
+    .flexbox-5 {
+        top: 3px;
+    }
+}

@@ -1,0 +1,250 @@
+:root {
+	--col1: rgb(27, 27, 27);
+}
+
+main {
+    color: var(--col1);
+}
+
+h1 {
+	left: calc(50vw - 150px);
+}
+
+.flexbox-3 {
+    color: green;
+    font-size: 120%;
+    top: 12px;
+}
+
+.separateur {
+	padding: 15px;
+	border-radius: 0 0 50% 50%;
+	background-color: darkcyan;
+	position:sticky;
+	top: 8vh;
+	z-index: 10;
+}
+
+/* reste du contenu */
+
+.integrer-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 180px calc(20vw - 100px) 50px calc(20vw - 100px);
+    background: darkcyan;
+    border-radius: 15%;
+    padding: 30px 40px 30px 40px;
+}
+
+.texte-intro {
+    width: 35vw;
+    padding-left: 25px;
+}
+
+.image-ronde {
+    border-radius: 50%;
+    border: 5px solid black;
+    width: calc(10vw + 100px);
+    height: calc(10vw + 100px);
+    transition: all 0.5s ease-in-out;
+}
+
+.image-ronde:hover {
+    transform: scale(1.1);
+    filter: hue-rotate(45deg);
+}
+
+.big-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 120px calc(20vw - 100px) 50px calc(20vw - 100px);
+    background: darkcyan;
+    border-radius: 10%;
+    padding: 30px 40px 30px 40px;
+}
+
+.left-content, .right-content {
+    width: calc(20vw + 100px);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5vw;
+    margin: 1.5vw;
+    background: rgb(0, 112, 112);
+    border: 5px solid black;
+    border-radius: 15%;
+    transition: all 0.5s ease-in-out;
+}
+
+.content:hover {
+    background: green;
+    transform: scale(1.1);
+    color: ivory;
+}
+
+.bottom-content {
+    padding: 30px 1.5vw 30px 1.5vw;
+}
+
+
+
+.orientation-general {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 0 100px 0;
+}
+
+.reorientation, .chiffres {
+    margin: 0 calc(5vw - 20px) 0 calc(5vw - 20px);
+    width: 30vw;
+    background: darkcyan;
+    border-radius: 15%;
+    padding: 30px 40px 30px 40px;
+    display: flex;
+}
+
+.reorientation {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chiffres {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chiffres h3 {
+    margin: 0 10vw 80px 10vw;
+}
+
+svg {
+    height: 86px;
+    width: 86px;
+    margin: -40px 20px 0 20px;
+    transform: rotate(270deg);
+}
+
+.compart-4, .compart-5, .compart-6 {
+    height: 86px;
+    width: 86px;
+    margin: -30px 20px 10px 20px;
+}
+
+circle {
+    fill: transparent;
+    stroke: green;
+    stroke-linecap: round;
+    stroke-width: 6px;
+    animation-iteration-count: 1;
+    stroke-dashoffset: 0;
+    animation: stroke 3s ease-out;
+}
+
+.cercle-1, .cercle-2 {
+    stroke-dasharray: 188;
+}
+
+.cercle-3 {
+    stroke-dasharray: 225;
+}
+
+.compart-1 p, .compart-2 p, .compart-3 p {
+    position: relative;
+    font-size: 110%;
+    bottom: 74px;
+    left: 3px;
+}
+
+
+
+.contenu-integrer h2{
+    margin: 50px 8vw 50px 8vw;
+}
+
+
+.contenu-integrer div{
+    background: rgb(0, 112, 112);
+    padding: 20px;
+    width: calc(30vw + 100px);
+    margin-bottom: 50px;
+    border-radius: 15%;
+    border: 5px solid black;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.contenu-integrer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: darkcyan;
+    margin: 30px calc(20vw - 100px) 80px calc(20vw - 100px);
+    border-radius: 10%;
+}
+
+.comp-generales {
+    left: calc(15vw - 50px);
+}
+
+.comp-techniques {
+    right: calc(15vw - 50px);
+}
+
+.comp-humaines {
+    left: calc(15vw - 50px);
+}
+
+.contenu-integrer div:hover {
+    background: green;
+    transform: scale(1.1);
+    color: ivory;
+}
+
+
+
+/* média querries pour responsive */
+
+
+@media (max-width: 1035px) {
+
+    .flexbox-3 {
+        top: 3px;
+    }
+}
+
+@media (orientation: portrait) {
+    
+    h1 {
+        left: calc(50vw - 120px);
+    }
+}
+
+@media (max-width: 1450px) {
+
+    .left-content, .right-content {
+        width: auto;
+    }
+
+    .integrer-intro {
+        flex-direction: column;
+    }
+
+    .texte-intro {
+        width: auto;
+        padding: 25px 0 0 0;
+    }
+
+}
+
+@keyframes stroke {
+    0% {stroke-dashoffset: 500;
+        stroke-dasharray: 500;}
+
+}
